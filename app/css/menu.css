@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+.menu-list{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.menu-item{
+    text-decoration: none;
+    background-color: #A7ECEE;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.icon{
+    display: inline-block;
+}
+
+.menu-item:hover{
+    text-decoration: none;
+    background-color: #9AC5F4;
+}
