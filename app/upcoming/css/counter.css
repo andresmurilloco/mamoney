@@ -1,0 +1,53 @@
+.counter-card{
+    text-align: center;
+    width: 100%;
+    background-color: #FFEEBB;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.counter-container div{
+    margin: 0px 25px 0px 25px;
+}
+
+.counter-container span{
+    color: red;
+    font-size: 48px;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+}
+
+@media (max-width:450px) {
+    .counter-card{
+        text-align: center;
+        width: 115%;
+        background-color: #FFEEBB;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    .counter-card h1{
+        font-size: 100%;
+    }
+
+    .counter-card h2{
+        font-size: 100%;
+    }
+
+    .counter-container div{
+        margin: 0% 2% 0% 2%;
+    }
+    
+    .counter-container span{
+        color: red;
+        font-size: 100%;
+        font-weight: bolder;
+        text-shadow: 1px 1px black;
+    }
+}

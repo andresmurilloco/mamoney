@@ -3,11 +3,34 @@
 @tailwind utilities;
 @tailwind variants;
 
+.component-container{
+  margin: -5px;
+  padding: 25px;
+  border-radius: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  z-index: 2;
+  background-color: #FFEEBB;
+}
+
 .menu-toggler-button {
   position: absolute;
   z-index: 3;
   left: 10px;
   top: 5px;
+}
+
+.navigation-container-visible{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.navigation-container-hidden{
+  display: none;
 }
 
 .collapsed-navigation{
@@ -36,10 +59,19 @@
   background-color: #9ac5f4;
 }
 
-@media (max-width:(360px)) {
-    .menu-toggler {
-        position: absolute;
-        z-index: 3;
-        left: 80%;
-      }
+@media (max-width:445px) {
+  .component-container{
+    width: 100%;
+    z-index: 2;
+  }  
+  .menu-toggler {
+    z-index: 3;
+    left: 80%;
+  }
+
+  .navigation-container-visible{
+    width: 100%;
+    position: absolute;
+    background-color: #FFEEBB;
+  }
 }

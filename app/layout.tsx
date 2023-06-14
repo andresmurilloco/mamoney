@@ -15,12 +15,10 @@ export default function RootLayout({children,}: {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex'>
-            <aside className="navigation-container-visible">
-              <Navigation/>
-            </aside>
-            <div className="children-container">
-              {children}
+        <div className='flex w-full'>
+            <Navigation/>
+          <div className="children-container">
+             {children}
           </div>
         </div>
       </body>

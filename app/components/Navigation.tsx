@@ -63,7 +63,7 @@ const links =[{
     id: 8,
     icon: UPCOMING_ICON,
     label: 'Upcoming plans',
-    route: '/'
+    route: '/upcoming'
 },
 {
     id: 9,
@@ -74,26 +74,29 @@ const links =[{
 ]
 
 const Navigation = () => {
-    const [menuVisible, setMenuVisible] = useState(false);
+    const [menuVisible, setMenuVisible] = useState(true);
+
   return (
-    <>
-        <button className="menu-toggler" onClick={()=>setMenuVisible(toggleMenu(menuVisible))}>{menuVisible? MENU_ICON : CLOSE_ICON}</button>
-        <div>
-            <Image src={LOGO} alt="Logo app"/>
-        </div>
-        <div className="flex flex-col">
-            <h1 className="text-2xl font-extrabold">Ma'money</h1>
-            <ul className="menu-list">
-                {links.map(({icon, label, route, id})=>(
-                    <div className="menu-item" key={id}>
-                        <li>
-                            <Link href={route}><span className="icon">{icon}</span>{label}</Link>
-                        </li>
-                    </div>
-                ))}
-            </ul>
-        </div>
-    </>
+    <div className="component-container">
+        <button className="menu-toggler" onClick={()=>setMenuVisible(!menuVisible)}>{menuVisible? MENU_ICON : CLOSE_ICON}</button>
+        <aside className={menuVisible ? 'navigation-container-hidden':'navigation-container-visible'} >
+            <div>
+                <Image src={LOGO} alt="Logo app"/>
+            </div>
+            <div className="flex flex-col">
+                <h1 className="text-2xl font-extrabold">Ma'money</h1>
+                <ul className="menu-list">
+                    {links.map(({icon, label, route, id})=>(
+                        <div className="menu-item" key={id} onClick={()=>setMenuVisible(!menuVisible)}>
+                            <li>
+                                <Link href={route}><span className="icon">{icon}</span>{label}</Link>
+                            </li>
+                        </div>
+                    ))}
+                </ul>
+            </div>
+        </aside>
+    </div>
   )
 }
 
