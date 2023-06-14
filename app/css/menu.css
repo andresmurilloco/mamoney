@@ -3,24 +3,43 @@
 @tailwind utilities;
 @tailwind variants;
 
-.menu-list{
-    margin-top: 10px;
-    list-style-type: none;
+.menu-toggler-button {
+  position: absolute;
+  z-index: 3;
+  left: 10px;
+  top: 5px;
 }
 
-.menu-item{
-    text-decoration: none;
-    background-color: #A7ECEE;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
+.collapsed-navigation{
+    display: none;
 }
 
-.icon{
-    display: inline-block;
+.menu-list {
+  margin-top: 10px;
+  list-style-type: none;
 }
 
-.menu-item:hover{
-    text-decoration: none;
-    background-color: #9AC5F4;
+.menu-item {
+  text-decoration: none;
+  background-color: #a7ecee;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.menu-item:hover {
+  text-decoration: none;
+  background-color: #9ac5f4;
+}
+
+@media (max-width:(360px)) {
+    .menu-toggler {
+        position: absolute;
+        z-index: 3;
+        left: 80%;
+      }
 }

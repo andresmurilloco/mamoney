@@ -10,7 +10,7 @@ body{
 
 .navigation-container-visible{
     display: flex;
-    width: 16.666667%;
+    width: 213.33px;
     flex-direction: column;
     text-align: center;
     overflow: hidden;
@@ -22,13 +22,16 @@ body{
 
 .children-container{
     display: flex;
-    width: 83.333333%;
     margin-left: 20px;
 }
 
-.navigation-container-toggler{
-    position: absolute;
-    z-index: 3;
+@media (min-width: 1280px) {
+    .navigation-container-visible{
+        width: 16.666667%;
+    }
+    .children-container{
+        width: 83.333333%;
+    }
 }
 
 @media (max-width:360px) {
