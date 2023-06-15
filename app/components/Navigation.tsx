@@ -84,7 +84,7 @@ const Navigation = () => {
                 <Image src={LOGO} alt="Logo app"/>
             </div>
             <div className="flex flex-col">
-                <h1 className="text-2xl font-extrabold">Ma'money</h1>
+                <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
                 <ul className="menu-list">
                     {links.map(({icon, label, route, id})=>(
                         <div className="menu-item" key={id} onClick={()=>setMenuVisible(!menuVisible)}>
