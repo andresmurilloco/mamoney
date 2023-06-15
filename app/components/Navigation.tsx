@@ -87,11 +87,13 @@ const Navigation = () => {
                 <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
                 <ul className="menu-list">
                     {links.map(({icon, label, route, id})=>(
-                        <div className="menu-item" key={id} onClick={()=>setMenuVisible(!menuVisible)}>
-                            <li>
-                                <Link href={route}><span className="icon">{icon}</span>{label}</Link>
-                            </li>
-                        </div>
+                        <Link href={route}>
+                            <div className="menu-item" key={id} onClick={()=>setMenuVisible(!menuVisible)}>
+                                <li>
+                                    <span className="icon">{icon}</span>{label}
+                                </li>
+                            </div>
+                        </Link>
                     ))}
                 </ul>
             </div>

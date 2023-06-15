@@ -31,11 +31,12 @@ const Counter = () => {
           }
       
           // Calculate the remaining days, hours, minutes, and seconds
-          const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24)%12);
-          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)%30);
-          const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
-          const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
-          const seconds = Math.floor((timeDifference / 1000) % 60);
+          const totalSeconds = Math.floor(timeDifference / 1000);
+          const months = Math.floor(totalSeconds / (30 * 24 * 60 * 60));
+          const days = Math.floor((totalSeconds % (30 * 24 * 60 * 60)) / (24 * 60 * 60));
+          const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+          const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+          const seconds = totalSeconds % 60;
       
           // Display the countdown
           setMonth(months);
