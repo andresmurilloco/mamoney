@@ -77,28 +77,30 @@ const Navigation = () => {
     const [menuVisible, setMenuVisible] = useState(true);
 
   return (
-    <div className="component-container">
-        <button className="menu-toggler" onClick={()=>setMenuVisible(!menuVisible)}>{menuVisible? MENU_ICON : CLOSE_ICON}</button>
-        <aside className={menuVisible ? 'navigation-container-hidden':'navigation-container-visible'} >
-            <div>
-                <Image src={LOGO} alt="Logo app"/>
-            </div>
-            <div className="flex flex-col">
-                <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
-                <ul className="menu-list">
-                    {links.map(({icon, label, route, id})=>(
-                        <Link href={route} key={id}>
-                            <div className="menu-item" onClick={()=>setMenuVisible(!menuVisible)}>
-                                <li>
-                                    <span className="icon">{icon}</span>{label}
-                                </li>
-                            </div>
-                        </Link>
-                    ))}
-                </ul>
-            </div>
-        </aside>
-    </div>
+    <>
+        <button className="menu-toggler-button" onClick={()=>setMenuVisible(!menuVisible)}>{menuVisible? MENU_ICON : CLOSE_ICON}</button>
+        <div className={menuVisible ? 'component-container-hidden' : 'component-container-visible'}>
+            <aside className={menuVisible ? 'navigation-container-hidden':'navigation-container-visible'} >
+                <div>
+                    <Image src={LOGO} alt="Logo app"/>
+                </div>
+                <div className="flex flex-col">
+                    <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
+                    <ul className="menu-list">
+                        {links.map(({icon, label, route, id})=>(
+                            <Link href={route} key={id}>
+                                <div className="menu-item" onClick={()=>setMenuVisible(!menuVisible)}>
+                                    <li>
+                                        <span className="icon">{icon}</span>{label}
+                                    </li>
+                                </div>
+                            </Link>
+                        ))}
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </>
   )
 }
 

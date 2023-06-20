@@ -22,12 +22,10 @@ h3{
 }
 
 .children-container{
-    padding-top: 100px;
-    position: absolute;
     display: flex;
-    z-index: 0;
     border-radius: 10px;
     width: 100%;
+    margin-left: 80px;
 }
 
 .children-container h1{
@@ -37,12 +35,13 @@ h3{
     font-size: xx-large;
 }
 
-.children-container-collapsed{
-    width: 83.333333%;
-}
-
-@media (min-width:450px) {
-    .children-container-collapsed{
-        display: none;
-    }   
+@media (max-width:450px) {
+    .children-container{
+        display: flex;
+        border-radius: 10px;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-left: 0%;
+    }
 }
