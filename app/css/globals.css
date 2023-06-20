@@ -36,3 +36,13 @@ h3{
     font-weight: bolder;
     font-size: xx-large;
 }
+
+.children-container-collapsed{
+    width: 83.333333%;
+}
+
+@media (min-width:450px) {
+    .children-container-collapsed{
+        display: none;
+    }   
+}

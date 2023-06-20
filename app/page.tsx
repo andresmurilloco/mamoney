@@ -4,7 +4,6 @@ import './css/history.css'
 import Image from 'next/image'
 
 import pieDummy from './assets/img/pieDummy.png'
-import linesDummy from './assets/img/linesDummy.png'
 import calendarDummy from './assets/img/calendarDummy.png'
 
 export default function Home() {
@@ -16,29 +15,28 @@ export default function Home() {
         <h1><Time/></h1>
       </div>
       <div className='calendar-container'>
-        <Image src={calendarDummy} className='graph' alt='Imagen de prueba de pie'/>
       </div>
       <div className='graph-container'>
+      <Image src={calendarDummy} className='graph' alt='Imagen de prueba de pie'/>
         <Image src={pieDummy} className='graph' alt='Imagen de prueba de pie'/>
-        <Image src={linesDummy} className='graph' alt='Imagen de prueba de lines'/>
       </div>
       <div className='history'>
         <table className='table-history'>
           <tbody>
             <tr>
-              <td>Cine</td>
+              <td>Citas</td>
               <td>$50.000</td>
             </tr>
             <tr>
-              <td>Cine</td>
+              <td>Alimentación</td>
               <td>$50.000</td>
             </tr>
             <tr>
-              <td>Cine</td>
+              <td>Entretenimiento</td>
               <td>$50.000</td>
             </tr>
             <tr>
-              <td>Cine</td>
+              <td>Combustible</td>
               <td>$50.000</td>
             </tr>
           </tbody>

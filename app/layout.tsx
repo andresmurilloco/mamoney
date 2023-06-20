@@ -9,9 +9,7 @@ export const metadata = {
   description: 'Find your money anytime!',
 }
 
-export default function RootLayout({children,}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body className={inter.className}>
