@@ -55,23 +55,23 @@ const Counter = () => {
         <h1>CARTAGENA 🏖️</h1>
         <div className="counter-container">
           <div>
-            <span>{month}</span>
+            <span>{String(month).padStart(2,'0')}</span>
             <h2>Months</h2>
           </div>
           <div>
-            <span>{day}</span>
+            <span>{String(day).padStart(2,'0')}</span>
             <h2>Days</h2>
           </div>
           <div>
-            <span>{hour}</span>
+            <span>{String(hour).padStart(2,'0')}</span>
             <h2>Hours</h2>
           </div>
           <div>
-            <span>{minute}</span>
+            <span>{String(minute).padStart(2,'0')}</span>
             <h2>Minutes</h2>
           </div>
           <div>
-            <span>{seconds}</span>
+            <span>{String(seconds).padStart(2,'0')}</span>
             <h2>Seconds</h2>
           </div>
         </div>
