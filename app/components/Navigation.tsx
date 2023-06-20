@@ -87,8 +87,8 @@ const Navigation = () => {
                 <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
                 <ul className="menu-list">
                     {links.map(({icon, label, route, id})=>(
-                        <Link href={route}>
-                            <div className="menu-item" key={id} onClick={()=>setMenuVisible(!menuVisible)}>
+                        <Link href={route} key={id}>
+                            <div className="menu-item" onClick={()=>setMenuVisible(!menuVisible)}>
                                 <li>
                                     <span className="icon">{icon}</span>{label}
                                 </li>
