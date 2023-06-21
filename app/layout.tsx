@@ -1,5 +1,5 @@
-import { Navigation } from './components'
 import './css/globals.css'
+import Navigation  from './menu'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,12 +15,9 @@ export default function RootLayout({children,}: {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex w-full'>
-            <Navigation/>
-          <div className="children-container">
-             {children}
-          </div>
-        </div>
+        <Navigation>
+          {children}
+        </Navigation>
       </body>
     </html>
   )

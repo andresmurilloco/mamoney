@@ -3,20 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 
-.component-container-visible{
-  padding: 25px;
-  margin-right: -80px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  background-color: #FFEEBB;
-}
-
-.component-container-hidden{
-  display: none;
-}
-
 .menu-toggler-button {
   position: absolute;
   z-index: 3;
@@ -28,10 +14,13 @@
 }
 
 .navigation-container-visible{
+  background-color: #FFEEBB;
   display: flex;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
+  width: 400px;
+  padding: 20px;
 }
 
 .navigation-container-hidden{
@@ -64,14 +53,33 @@
   background-color: #9ac5f4;
 }
 
-@media (max-width:445px) {
-  .component-container-visible{
-    width: 100%;
-    z-index: 2;
-    margin-left: -25px;
-    margin-top: -25px;
-  }
-  
+.children-container-visible{
+  display: flex;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.children-container-visible h1{
+  color: #9AC5F4;
+  text-shadow:1px 2px 5px black;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.children-container-hidden{
+  display: flex;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.children-container-hidden h1{
+  color: #9AC5F4;
+  text-shadow:1px 2px 5px black;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+@media (max-width:445px) {  
   .menu-toggler {
     z-index: 3;
     left: 80%;
@@ -82,4 +90,18 @@
     position: absolute;
     background-color: #FFEEBB;
   }
+
+  .children-container-visible{
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 0%;
+  }
+
+  .children-container-hidden{
+    display: none;
+  }
+  
 }

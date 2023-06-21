@@ -20,28 +20,3 @@ h2{
 h3{
     color: #A7ECEE
 }
-
-.children-container{
-    display: flex;
-    border-radius: 10px;
-    width: 100%;
-    margin-left: 80px;
-}
-
-.children-container h1{
-    color: #9AC5F4;
-    text-shadow:1px 2px 5px black;
-    font-weight: bolder;
-    font-size: xx-large;
-}
-
-@media (max-width:450px) {
-    .children-container{
-        display: flex;
-        border-radius: 10px;
-        width: 100%;
-        flex-direction: column;
-        margin-top: 60px;
-        margin-left: 0%;
-    }
-}
