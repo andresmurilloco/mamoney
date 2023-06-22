@@ -1,0 +1,131 @@
+.modal-button{
+    position: fixed;
+    z-index: 3;
+    bottom: 5px;
+    right: 10px;
+    background-color: #f49a9a;
+    padding: 5px;
+    border-radius: 50% 50%;
+    color: red;
+  }
+
+  .modal-shadow{
+    position: fixed;
+    background-color: black;
+    opacity: 80%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-container{
+    background-color: #FFEEBB;
+    position: fixed;
+    z-index: 5;
+    left: 35%;
+    top: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+
+  .transaction-options-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  .transaction-options-container input{
+    visibility: hidden;
+    display: block;
+    position: fixed;  
+  }
+
+  .transaction-options-container :checked+label{
+    font-weight: bolder;
+  }
+
+.expense-transaction{
+  color: red;
+  display: flex;
+  background-color: #f49a9a;
+  border-radius: 20px 20px 0px 0;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.income-transaction{
+  color: green;
+  display: flex;
+  background-color: rgb(159, 255, 223);
+  border-radius: 20px 20px 0px 0;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.transfer-transaction{
+  color: orange;
+  display: flex;
+  background-color: rgb(255, 255, 139);
+  border-radius: 20px 20px 0px 0;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+  .input-container{
+    display: grid;
+    grid-template-columns: 100px 200px;
+    text-align: center;
+    margin: 20px;
+    background-color: #A7ECEE;
+    height: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-container input{
+    height: 30px;
+    border-radius: 20px;
+    background-color: #dcfdff;
+  }
+
+  .buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .save-button{
+    background-color: rgb(159, 255, 223);
+    color: green;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+  }
+
+  .cancel-button{
+    background-color: #f49a9a;
+    color: red;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+  }
+
+  @media (max-width:450px) {
+    .form-container{
+      width: 100%;
+      left: 0%;
+      top: 10%;
+      padding: 20px;
+    }
+  }
