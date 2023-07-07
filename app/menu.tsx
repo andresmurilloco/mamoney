@@ -92,7 +92,7 @@ const Navigation = ({children,}: {
                 </div>
                 <div className="flex flex-col">
                     <h1 className="text-2xl font-extrabold">Ma&apos;money</h1>
-                    <h2 className="text-2xl extrabold">--⚠Not a final version. Work in progress⚠--</h2>
+                    <h2 className="text-2xl extrabold bg-red-600">--⚠Not a final version. Work in progress⚠--</h2>
                     <ul className="menu-list">
                         {links.map(({icon, label, route, id})=>(
                             <Link href={route} key={id}>
