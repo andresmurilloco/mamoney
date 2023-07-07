@@ -1,9 +1,6 @@
 import { Time } from './components'
 import './css/home.css'
 import './css/history.css'
-import Image from 'next/image'
-import pieDummy from './assets/img/pieDummy.png'
-import calendarDummy from './assets/img/calendarDummy.png'
 import CalendarComponent from './components/CalendarComponent'
 
 export default function Home() {
@@ -15,10 +12,6 @@ export default function Home() {
       </div>
       <div className='calendar-container'>
         <CalendarComponent/>
-      </div>
-      <div className='graph-container'>
-      |<Image src={calendarDummy} className='graph' alt='Imagen de prueba de pie'/>
-       <Image src={pieDummy} className='graph' alt='Imagen de prueba de pie'/>
       </div>
       <div className='history'>
         <table className='table-history'>
