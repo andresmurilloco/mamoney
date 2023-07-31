@@ -8,7 +8,7 @@ function CalendarComponent() {
 
   return (
     <div>
-      <Calendar onChange={()=>console.log('Funciona')} value={value} />
+      <Calendar locale='es' onChange={()=>console.log('Funciona')} value={value} />
     </div>
   );
 }
