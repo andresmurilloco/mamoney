@@ -1,4 +1,3 @@
-import { Time } from './components'
 import './css/home.css'
 import './css/history.css'
 import CalendarComponent from './components/CalendarComponent'
@@ -7,9 +6,6 @@ export default function Home() {
   
   return (
     <div className='page-container'>
-      <div className="title-container">
-        <h1><Time/></h1>
-      </div>
       <div className='calendar-container'>
         <CalendarComponent/>
       </div>

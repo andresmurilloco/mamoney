@@ -5,6 +5,8 @@ import Calendar from 'react-calendar';
 
 function CalendarComponent() {
   const [value, onChange] = useState(new Date());
+  console.log(value);
+  
 
   return (
     <div>
