@@ -23,19 +23,6 @@
     width: 40%;
 }
 
-.calendar-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.history{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 @media (max-width:450px){
     .graph-container{
         display: flex;
@@ -47,18 +34,5 @@
 
     .graph{
         width: 100%;
-    }
-    
-    .calendar-container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .history{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
     }
 }
